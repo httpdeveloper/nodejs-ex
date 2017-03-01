@@ -19,6 +19,9 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket) {
 
+
+    console.log('Network Connected');
+
     
     socket.emit('onConnect', 'Network Connected');
 
@@ -35,6 +38,6 @@ io.on('connection', function(socket) {
 });
 
 
-http.listen(port, ip, function() {
+http.listen(port, function() {
   console.log("Server running @ http://" + ip + ":" + port);
 });
