@@ -9,6 +9,13 @@ const path = require('path');
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
+var domain = process.env.OPENSHIFT_APP_DNS;
+
+
+console.log('---START--');
+console.log(domain)
+console.log('---END--');
+
 
 app.use(express.static(__dirname + '/'));
 
